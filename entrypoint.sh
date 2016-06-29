@@ -7,4 +7,5 @@ do
 done
 
 echo "Consul ready, let's go"
+envconsul -once -config /app/.envconsul.hcl env > /app/.env
 exec envconsul -once -config /app/.envconsul.hcl "$@"
